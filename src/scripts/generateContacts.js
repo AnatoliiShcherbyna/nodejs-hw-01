@@ -1,27 +1,24 @@
-import fs from 'node:fs/promises';
+import * as fs from 'node:fs/promises';
 import { PATH_DB } from '../constants/contacts.js';
 import { createFakeContact } from '../utils/createFakeContact.js';
 
 const generateContacts = async (number) => {
   try {
-    let contacts = [];
+    let contacts;
     try {
-      const data = await fs.readFile(PATH_DB, 'utf8');
-      contacts = JSON.parse(data) || [];
-    } catch (err) {
-      contacts = [];
+      const data = await fs.readFile(PATH_DB, 'utf-8');
+      contacts = data ? JSON.parse(data) : [];
+    } catch (error) {
+      if (error.code !== 'ENOENT') {
+        throw error;
+      }
     }
-
-    const newContacts = Array.from({ length: number }, () =>
-      createFakeContact(),
-    );
-    contacts = [...contacts, ...newContacts];
-
-    const updatedData = JSON.stringify(contacts);
-    await fs.writeFile(PATH_DB, updatedData, 'utf8');
-    console.log('Contacts updated successfully.');
-  } catch (err) {
-    console.error('Error:', err);
+    for (let i = 0; i < number; i++) {
+      contacts.push(createFakeContact());
+    }
+    await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2), 'utf-8');
+  } catch (error) {
+    console.error(error);
   }
 };
 
