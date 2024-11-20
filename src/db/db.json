@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "fdafa125-02f5-4b84-82d5-dda6ada43297",
+    "name": "Jerome Murazik",
+    "phone": "(852) 351-4796",
+    "email": "Moises.Bayer@hotmail.com",
+    "job": "Human Functionality Facilitator"
+  },
+  {
+    "id": "cb87619f-3934-4e83-9be7-f4d4e4978c8b",
+    "name": "Rene Larson",
+    "phone": "201-787-6568 x26858",
+    "email": "Bobby_Zulauf25@hotmail.com",
+    "job": "Direct Tactics Developer"
+  },
+  {
+    "id": "2705462e-2452-4701-adcb-793666891947",
+    "name": "Latoya Borer",
+    "phone": "699.761.7977 x6091",
+    "email": "Nathaniel32@yahoo.com",
+    "job": "Product Brand Liaison"
+  },
+  {
+    "id": "e216bdd1-e2bd-439c-b367-7e233a8c15b7",
+    "name": "Jacob Cummerata",
+    "phone": "449-983-6270 x175",
+    "email": "Rafaela75@yahoo.com",
+    "job": "National Metrics Analyst"
+  },
+  {
+    "id": "559f3cbb-445f-4bd6-8bea-0be0491d0c6d",
+    "name": "Kimberly Schoen",
+    "phone": "800-792-9860",
+    "email": "Bernadine.Blanda-Kris89@yahoo.com",
+    "job": "Customer Factors Manager"
+  }
+]
